@@ -7,6 +7,7 @@ RUN groupadd $SERVICE_USER && useradd --create-home --home $SERVICE_ROOT --gid $
 
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY conf/ /etc/nginx/conf/
+COPY certs/ /etc/ssl/certs
 
 RUN chown -R $SERVICE_USER:$SERVICE_USER $SERVICE_ROOT
 WORKDIR $SERVICE_ROOT
