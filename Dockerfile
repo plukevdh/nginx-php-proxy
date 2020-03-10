@@ -1,4 +1,4 @@
-FROM nginx:1.13
+FROM nginx:1.16
 
 ENV SERVICE_ROOT /service
 ENV SERVICE_USER service
