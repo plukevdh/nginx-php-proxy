@@ -8,6 +8,5 @@ build:
 	docker build -t $(DOCKER_REPO):$(GIT_BRANCH) --build-arg TLD=$(ENV_TLD) --no-cache -t $(DOCKER_REPO):$(GIT_SHA) .
 
 publish:
-	$$(aws ecr get-login --no-include-email)
 	docker push $(DOCKER_REPO):$(GIT_BRANCH)
 	docker push $(DOCKER_REPO):$(GIT_SHA)
